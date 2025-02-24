@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.8.4.202307181708" AlpVersion="8.8.2">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.0.202404161236" AlpVersion="8.9.0">
 <Model>
 	<Id>1695375917542</Id>
 	<Name><![CDATA[SEIR model]]></Name>
@@ -111,7 +111,7 @@
 				<Variable Class="StockVariable">
 					<Id>1695375974418</Id>
 					<Name><![CDATA[S]]></Name>
-					<X>100</X><Y>400</Y>
+					<X>100</X><Y>460</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -119,7 +119,7 @@
 					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>100</Width>
-					<Height>200</Height>
+					<Height>140</Height>
 						<InitialValue><![CDATA[N*0.999]]></InitialValue>
 						<Color>-14774017</Color>
 					</Properties>
@@ -127,7 +127,7 @@
 				<Variable Class="StockVariable">
 					<Id>1695376016116</Id>
 					<Name><![CDATA[I]]></Name>
-					<X>600</X><Y>400</Y>
+					<X>600</X><Y>460</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -135,7 +135,7 @@
 					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>100</Width>
-					<Height>200</Height>
+					<Height>140</Height>
 						<InitialValue><![CDATA[N*0.001]]></InitialValue>
 						<Color>-65281</Color>
 					</Properties>
@@ -143,7 +143,7 @@
 				<Variable Class="StockVariable">
 					<Id>1695376112772</Id>
 					<Name><![CDATA[R]]></Name>
-					<X>850</X><Y>400</Y>
+					<X>850</X><Y>460</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -151,7 +151,7 @@
 					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>100</Width>
-					<Height>200</Height>
+					<Height>140</Height>
 						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color>-16711936</Color>
 					</Properties>
@@ -159,7 +159,7 @@
 				<Variable Class="StockVariable">
 					<Id>1695920728988</Id>
 					<Name><![CDATA[Е]]></Name>
-					<X>350</X><Y>400</Y>
+					<X>350</X><Y>460</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -167,7 +167,7 @@
 					<Properties Array="false">
 					<EquationStyle>classic</EquationStyle>
 					<Width>100</Width>
-					<Height>200</Height>
+					<Height>140</Height>
 						<InitialValue><![CDATA[0]]></InitialValue>
 						<Color>-10496</Color>
 					</Properties>
@@ -175,8 +175,8 @@
 				<Variable Class="Flow">
 					<Id>1695376138759</Id>
 					<Name><![CDATA[contact]]></Name>
-					<X>100</X><Y>400</Y>
-					<Label><X>5</X><Y>-20</Y></Label>
+					<X>100</X><Y>460</Y>
+					<Label><X>15</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -194,7 +194,7 @@
 				<Variable Class="Flow">
 					<Id>1695376472551</Id>
 					<Name><![CDATA[recovery]]></Name>
-					<X>600</X><Y>400</Y>
+					<X>600</X><Y>460</Y>
 					<Label><X>0</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -213,7 +213,7 @@
 				<Variable Class="Flow">
 					<Id>1695921731474</Id>
 					<Name><![CDATA[infection]]></Name>
-					<X>370</X><Y>400</Y>
+					<X>350</X><Y>460</Y>
 					<Label><X>-10</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -223,16 +223,16 @@
 						<Color/>
 						<ValveIndex>1</ValveIndex>
 						<Points>
-							<Point><X>-20</X><Y>0</Y></Point>
-							<Point><X>100</X><Y>0</Y></Point>
-							<Point><X>230</X><Y>0</Y></Point>
+							<Point><X>0</X><Y>0</Y></Point>
+							<Point><X>120</X><Y>0</Y></Point>
+							<Point><X>250</X><Y>0</Y></Point>
 						</Points>
 					</Properties>
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1695376244349</Id>
 					<Name><![CDATA[beta]]></Name>
-					<X>170</X><Y>550</Y>
+					<X>220</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -256,7 +256,7 @@
 				<Variable Class="Parameter">
 					<Id>1695376314610</Id>
 					<Name><![CDATA[gamma]]></Name>
-					<X>670</X><Y>550</Y>
+					<X>720</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -266,7 +266,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.2]]></Code>
+							<Code><![CDATA[0.1]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1695376314608</Id>
@@ -280,7 +280,7 @@
 				<Variable Class="Parameter">
 					<Id>1695378377525</Id>
 					<Name><![CDATA[N]]></Name>
-					<X>50</X><Y>50</Y>
+					<X>50</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -290,7 +290,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[100000]]></Code>
+							<Code><![CDATA[10000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1695378377523</Id>
@@ -304,7 +304,7 @@
 				<Variable Class="Parameter">
 					<Id>1695498921964</Id>
 					<Name><![CDATA[delta]]></Name>
-					<X>420</X><Y>550</Y>
+					<X>470</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -328,12 +328,12 @@
 			</Variables>
 			<Dependences>
 				<Link SourceId="1695376016116" TargetId="1695376138759" Polarity="null">
-					<Height>-140.868</Height>
+					<Height>-119.603</Height>
 					<PolarityPosition>0.95</PolarityPosition>
 					<Direction><X>-380</X><Y>0</Y></Direction>
 					<Id>1695376410448</Id>
 					<Name><![CDATA[I - contact]]></Name>
-					<X>600</X><Y>400</Y>
+					<X>600</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -348,7 +348,7 @@
 					<Direction><X>120</X><Y>0</Y></Direction>
 					<Id>1695376413947</Id>
 					<Name><![CDATA[S - contact]]></Name>
-					<X>100</X><Y>400</Y>
+					<X>100</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -358,12 +358,12 @@
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1695376244349" TargetId="1695376138759" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>50</X><Y>-150</Y></Direction>
+					<Direction><X>0</X><Y>-70</Y></Direction>
 					<Id>1695376416101</Id>
 					<Name><![CDATA[beta - contact]]></Name>
-					<X>170</X><Y>550</Y>
+					<X>220</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -378,7 +378,7 @@
 					<Direction><X>120</X><Y>0</Y></Direction>
 					<Id>1695376502149</Id>
 					<Name><![CDATA[I - recovery]]></Name>
-					<X>600</X><Y>400</Y>
+					<X>600</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -388,12 +388,12 @@
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1695376314610" TargetId="1695376472551" Polarity="null">
-					<Height>22.14</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>50</X><Y>-150</Y></Direction>
+					<Direction><X>0</X><Y>-70</Y></Direction>
 					<Id>1695376504187</Id>
 					<Name><![CDATA[gamma - recovery]]></Name>
-					<X>670</X><Y>550</Y>
+					<X>720</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -405,10 +405,10 @@
 				<Link SourceId="1695378377525" TargetId="1695375974418" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>50</X><Y>350</Y></Direction>
+					<Direction><X>50</X><Y>130</Y></Direction>
 					<Id>1695378400733</Id>
 					<Name><![CDATA[N - S]]></Name>
-					<X>50</X><Y>50</Y>
+					<X>50</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -418,12 +418,12 @@
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1695378377525" TargetId="1695376016116" Polarity="null">
-					<Height>0.0</Height>
+					<Height>41.971</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>550</X><Y>350</Y></Direction>
+					<Direction><X>550</X><Y>130</Y></Direction>
 					<Id>1695378407432</Id>
 					<Name><![CDATA[N - I]]></Name>
-					<X>50</X><Y>50</Y>
+					<X>50</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -433,12 +433,12 @@
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1695378377525" TargetId="1695376138759" Polarity="null">
-					<Height>20.0</Height>
+					<Height>33.218</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>170</X><Y>350</Y></Direction>
+					<Direction><X>170</X><Y>130</Y></Direction>
 					<Id>1695496714267</Id>
 					<Name><![CDATA[N - contact]]></Name>
-					<X>50</X><Y>50</Y>
+					<X>50</X><Y>330</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -448,12 +448,12 @@
 					<Delay>false</Delay>
 				</Link>
 				<Link SourceId="1695498921964" TargetId="1695921731474" Polarity="null">
-					<Height>20.0</Height>
+					<Height>0.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>50</X><Y>-150</Y></Direction>
+					<Direction><X>0</X><Y>-70</Y></Direction>
 					<Id>1695921851654</Id>
 					<Name><![CDATA[delta - infection]]></Name>
-					<X>420</X><Y>550</Y>
+					<X>470</X><Y>530</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -468,7 +468,7 @@
 					<Direction><X>120</X><Y>0</Y></Direction>
 					<Id>1695921864923</Id>
 					<Name><![CDATA[Е - infection]]></Name>
-					<X>350</X><Y>400</Y>
+					<X>350</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -519,7 +519,7 @@
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1695376604074</Id>
 					<Name><![CDATA[slider]]></Name>
-					<X>50</X><Y>530</Y>
+					<X>170</X><Y>550</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -542,7 +542,7 @@
 				<Text>
 					<Id>1695376637276</Id>
 					<Name><![CDATA[text]]></Name>
-					<X>50</X><Y>560</Y>
+					<X>170</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -564,7 +564,7 @@
 				<Text>
 					<Id>1695376637284</Id>
 					<Name><![CDATA[text1]]></Name>
-					<X>150</X><Y>560</Y>
+					<X>270</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -586,7 +586,7 @@
 				<Text>
 					<Id>1695376637286</Id>
 					<Name><![CDATA[text2]]></Name>
-					<X>100</X><Y>560</Y>
+					<X>220</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -609,7 +609,7 @@
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1695376646865</Id>
 					<Name><![CDATA[slider1]]></Name>
-					<X>550</X><Y>530</Y>
+					<X>670</X><Y>550</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -632,7 +632,7 @@
     			<TimePlot>
 					<Id>1695376762365</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>150</X><Y>0</Y>
+					<X>430</X><Y>0</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -650,15 +650,15 @@
 						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>530</Width>
-					<Height>270</Height>
+					<Width>570</Width>
+					<Height>320</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>450</Width>
-						<Height>180</Height>
+						<Width>490</Width>
+						<Height>230</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -721,15 +721,15 @@
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
 					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<SamplesToKeep>200</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[200]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
 				<Text>
 					<Id>1695377067745</Id>
 					<Name><![CDATA[text3]]></Name>
-					<X>550</X><Y>560</Y>
+					<X>670</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -751,7 +751,7 @@
 				<Text>
 					<Id>1695377067747</Id>
 					<Name><![CDATA[text4]]></Name>
-					<X>650</X><Y>560</Y>
+					<X>770</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -773,7 +773,7 @@
 				<Text>
 					<Id>1695377067749</Id>
 					<Name><![CDATA[text5]]></Name>
-					<X>600</X><Y>560</Y>
+					<X>720</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -796,7 +796,7 @@
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1695498952044</Id>
 					<Name><![CDATA[slider2]]></Name>
-					<X>300</X><Y>530</Y>
+					<X>420</X><Y>550</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -819,7 +819,7 @@
 				<Text>
 					<Id>1695498973608</Id>
 					<Name><![CDATA[text6]]></Name>
-					<X>300</X><Y>560</Y>
+					<X>420</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -841,7 +841,7 @@
 				<Text>
 					<Id>1695498973610</Id>
 					<Name><![CDATA[text7]]></Name>
-					<X>400</X><Y>560</Y>
+					<X>520</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -863,7 +863,7 @@
 				<Text>
 					<Id>1695498973612</Id>
 					<Name><![CDATA[text8]]></Name>
-					<X>350</X><Y>560</Y>
+					<X>470</X><Y>580</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -885,7 +885,7 @@
     			<TimePlot>
 					<Id>1695923614681</Id>
 					<Name><![CDATA[plot1]]></Name>
-					<X>650</X><Y>0</Y>
+					<X>0</X><Y>0</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -903,15 +903,15 @@
 						<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 					</RecurrenceCode>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>350</Width>
-					<Height>270</Height>
+					<Width>450</Width>
+					<Height>320</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>270</Width>
-						<Height>180</Height>
+						<Width>370</Width>
+						<Height>230</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -964,8 +964,8 @@
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>2.0</LineWidth>
 					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<SamplesToKeep>200</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[200]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
@@ -976,7 +976,7 @@
 
 		</ActiveObjectClass>
 	</ActiveObjectClasses>	
-	<DifferentialEquationsMethod>EULER</DifferentialEquationsMethod>
+	<DifferentialEquationsMethod>RK4</DifferentialEquationsMethod>
 	<MixedEquationsMethod>RK45_NEWTON</MixedEquationsMethod>
 	<AlgebraicEquationsMethod>MODIFIED_NEWTON</AlgebraicEquationsMethod>
 	<AbsoluteAccuracy>1.0E-5</AbsoluteAccuracy>
