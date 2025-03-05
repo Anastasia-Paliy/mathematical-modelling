@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from itertools import product
 
-from NSolveDE import RK4_auto_system
+from NSolveDE import RK4_auto_system_XY
 
 
 def dx1(x1, x2, args):
@@ -28,7 +28,7 @@ def competition(a_1, a_2, b_12, b_21, c_1, c_2, x1_0, x2_0, dt, n: int):
     x2[0] = x2_0
 
     for t in range(0, n - 1):
-        x1[t + 1], x2[t + 1] = RK4_auto_system(dx1, dx2, x1[t], x2[t], dt, [a_1, b_12, c_1], [a_2, b_21, c_2])
+        x1[t + 1], x2[t + 1] = RK4_auto_system_XY(dx1, dx2, x1[t], x2[t], dt, [a_1, b_12, c_1], [a_2, b_21, c_2])
 
     return x1, x2
 

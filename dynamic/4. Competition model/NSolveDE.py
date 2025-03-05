@@ -55,6 +55,7 @@ def Euler_i(g, x_t, t, dt, g_args):
     :return: x(t+dt)
     """
     x_next = x_t + dt * g(t, x_t, g_args)
+
     return x_next
 
 
@@ -73,12 +74,13 @@ def RK4_i(g, x_t, t, dt, g_args):
     k3 = dt * g(t + dt / 2, x_t + k2 / 2, g_args)
     k4 = dt * g(t + dt, x_t + k3, g_args)
     x_next = x_t + (k1 + 2 * k2 + 2 * k3 + k4) / 6
+
     return x_next
 
 
-def Euler_auto_system(f, g, x_t, y_t, dt, f_args, g_args):
+def Euler_auto_system_XY(f, g, x_t, y_t, dt, f_args, g_args):
     """
-    Numerical solving of autonomous DE system by the Euler method
+    Numerical solving of a two-dimensional autonomous DE system by the Euler method
     :param f: function name f(x, y, *args) = dx/dt
     :param g: function name g(x, y, *args) = dy/dt
     :param x_t: x(t)
@@ -90,12 +92,13 @@ def Euler_auto_system(f, g, x_t, y_t, dt, f_args, g_args):
     """
     x_next = x_t + dt * f(x_t, y_t, f_args)
     y_next = y_t + dt * g(x_t, y_t, g_args)
+
     return x_next, y_next
 
 
-def RK4_auto_system(f, g, x_t, y_t, dt, f_args, g_args):
+def RK4_auto_system_XY(f, g, x_t, y_t, dt, f_args, g_args):
     """
-    Numerical solving of autonomous DE system by the Runge-Kutta method (4th order)
+    Numerical solving of a two-dimensional autonomous DE system by the Runge-Kutta method (4th order)
     :param f: function name f(t, x, y, *args) = dx/dt
     :param g: function name g(t, x, y, *args) = dy/dt
     :param x_t: x(t)
@@ -119,4 +122,65 @@ def RK4_auto_system(f, g, x_t, y_t, dt, f_args, g_args):
 
     x_next = x_t + (k1x + 2 * k2x + 2 * k3x + k4x) / 6
     y_next = y_t + (k1y + 2 * k2y + 2 * k3y + k4y) / 6
+
     return x_next, y_next
+
+
+def Euler_auto_system_XYZ(f, g, h, x_t, y_t, z_t, dt, f_args, g_args, h_args):
+    """
+    Numerical solving of a three-dimensional autonomous DE system by the Euler method
+    :param f: function name f(x, y, z, *args) = dx/dt
+    :param g: function name g(x, y, z, *args) = dy/dt
+    :param h: function name h(x, y, z, *args) = dy/dt
+    :param x_t: x(t)
+    :param y_t: y(t)
+    :param z_t: z(t)
+    :param dt: t_step
+    :param f_args: additional positional arguments of the function f (iterable object)
+    :param g_args: additional positional arguments of the function g (iterable object)
+    :param h_args: additional positional arguments of the function h (iterable object)
+    :return: tuple (x(t+dt), y(t+dt), z(t+dt))
+    """
+    x_next = x_t + dt * f(x_t, y_t, z_t, f_args)
+    y_next = y_t + dt * g(x_t, y_t, z_t, g_args)
+    z_next = z_t + dt * h(x_t, y_t, z_t, h_args)
+
+    return x_next, y_next, z_next
+
+
+def RK4_auto_system_XYZ(f, g, h, x_t, y_t, z_t, dt, f_args, g_args, h_args):
+    """
+    Numerical solving of a three-dimensional autonomous DE system by the Runge-Kutta method (4th order)
+    :param f: function name f(x, y, z, *args) = dx/dt
+    :param g: function name g(x, y, z, *args) = dy/dt
+    :param h: function name h(x, y, z, *args) = dy/dt
+    :param x_t: x(t)
+    :param y_t: y(t)
+    :param z_t: z(t)
+    :param dt: t_step
+    :param f_args: additional positional arguments of the function f (iterable object)
+    :param g_args: additional positional arguments of the function g (iterable object)
+    :param h_args: additional positional arguments of the function h (iterable object)
+    :return: tuple (x(t+dt), y(t+dt), z(t+dt))
+    """
+    k1x = dt * f(x_t, y_t, z_t, f_args)
+    k1y = dt * g(x_t, y_t, z_t, g_args)
+    k1z = dt * h(x_t, y_t, z_t, h_args)
+
+    k2x = dt * f(x_t + k1x / 2, y_t + k1y / 2, z_t + k1z / 2, f_args)
+    k2y = dt * g(x_t + k1x / 2, y_t + k1y / 2, z_t + k1z / 2, g_args)
+    k2z = dt * h(x_t + k1x / 2, y_t + k1y / 2, z_t + k1z / 2, h_args)
+
+    k3x = dt * f(x_t + k2x / 2, y_t + k2y / 2, z_t + k2z / 2, f_args)
+    k3y = dt * g(x_t + k2x / 2, y_t + k2y / 2, z_t + k2z / 2, g_args)
+    k3z = dt * h(x_t + k2x / 2, y_t + k2y / 2, z_t + k2z / 2, h_args)
+
+    k4x = dt * f(x_t + k3x, y_t + k3y, z_t + k3z, f_args)
+    k4y = dt * g(x_t + k3x, y_t + k3y, z_t + k3z, g_args)
+    k4z = dt * h(x_t + k3x, y_t + k3y, z_t + k3z, h_args)
+
+    x_next = x_t + (k1x + 2 * k2x + 2 * k3x + k4x) / 6
+    y_next = y_t + (k1y + 2 * k2y + 2 * k3y + k4y) / 6
+    z_next = z_t + (k1z + 2 * k2z + 2 * k3z + k4z) / 6
+
+    return x_next, y_next, z_next

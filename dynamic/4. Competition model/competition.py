@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from itertools import product
 from my_tools import operator
-from NSolveDE import RK4_auto_system, Euler_auto_system
+from NSolveDE import RK4_auto_system_XY, Euler_auto_system_XY
 
 
 class CompetitionModel(object):
@@ -34,7 +34,7 @@ class CompetitionModel(object):
     def dx2(self, x1, x2, args):
         return self.a2 * x2 - self.b21 * x1 * x2 - self.c2 * x2 ** 2
 
-    def get_integral_curves(self, x1_0, x2_0, t0, T, dt, method='RK4'):
+    def get_integral_curve(self, x1_0, x2_0, t0, T, dt, method='RK4'):
         time = np.arange(t0, T, dt)
 
         n = time.shape[0]
@@ -44,20 +44,20 @@ class CompetitionModel(object):
         x2[0] = x2_0
 
         if method == 'RK4':
-            get_next = RK4_auto_system
+            get_next = RK4_auto_system_XY
         elif method == 'Euler':
-            get_next = Euler_auto_system
+            get_next = Euler_auto_system_XY
         else:
             print('Invalid method value. RK4 method used instead. '
                   'Available options are "RK4" and "Euler"')
-            get_next = RK4_auto_system
+            get_next = RK4_auto_system_XY
 
         for t in range(0, n - 1):
             x1[t + 1], x2[t + 1] = get_next(self.dx1, self.dx2, x1[t], x2[t], dt, None, None)
 
         return time, x1, x2
 
-    def plot(self,
+    def plot(self, t0, T, dt,
              initial_point=(1, 1),
              x1_min=1,
              x2_min=1,
@@ -87,9 +87,9 @@ class CompetitionModel(object):
                       f'a2 * b12 {operator(self.case2)} a1 * c2')
 
         # Timeline
-        time, X1, X2 = self.get_integral_curves(initial_point[0],
-                                                initial_point[1],
-                                                t0, T, dt, 'RK4')
+        time, X1, X2 = self.get_integral_curve(initial_point[0],
+                                               initial_point[1],
+                                               t0, T, dt, 'RK4')
         axes[0].plot(time, X1, label=f'Species 1: x1(0) = {initial_point[0]}')
         axes[0].plot(time, X2, label=f'Species 2: x2(0) = {initial_point[1]}')
 
@@ -100,7 +100,7 @@ class CompetitionModel(object):
 
         # Phase plane
         for (x1_0, x2_0) in initial_points:
-            time, X1, X2 = self.get_integral_curves(x1_0, x2_0, t0, T, dt, 'RK4')
+            time, X1, X2 = self.get_integral_curve(x1_0, x2_0, t0, T, dt, 'RK4')
             axes[1].plot(X1, X2)
 
         for (x1_0, x2_0) in self.equilibrium_points:
@@ -176,5 +176,5 @@ t0 = 0
 T = 5
 dt = 0.01
 
-# model.plot(initial_point=(1, 10))
-model.streamplot()
+model.plot(t0, T, dt, initial_point=(1, 10))
+# model.streamplot()
